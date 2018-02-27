@@ -21,7 +21,7 @@ ENV PASS changeme
 
 RUN mkdir -p /var/log/supervisor
 
-COPY target/sandbox_fsTransporte app.jar
+COPY target/sandbox_fsTransporte.jar app.jar
 ADD conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD conf/start.sh /usr/local/bin/start.sh
 ADD conf/vsftpd.conf /etc/vsftpd.conf
