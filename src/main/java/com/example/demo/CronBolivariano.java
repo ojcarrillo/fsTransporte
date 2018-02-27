@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
