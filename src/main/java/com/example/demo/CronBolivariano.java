@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
@@ -9,14 +11,18 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CronBolivariano {
+	
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	/* ruta del directorio compartido */
-	private static final String PATH = "c:\\" + File.separator + "temp" + File.separator + "pruebas" + File.separator;
+	private static final String PATH = File.separator + "ftp" + File.separator + "touresbalon" + File.separator;
 	private static final String PREFIJO = "rta_";
 
 	/* formato para la fecha hora de ejecucion */
@@ -24,8 +30,8 @@ public class CronBolivariano {
 
 	@Scheduled(fixedDelay = 5000, initialDelay = 5000)
 	public void comprobarDirectorio() {
-		System.out.println("aca esta! " + dateTimeFormatter.format(LocalDateTime.now()));
-		System.out.println(PATH);
+		log.info("aca esta! " + dateTimeFormatter.format(LocalDateTime.now()));
+		log.info(PATH);
 		leerDirectorio();
 	}
 
@@ -39,8 +45,8 @@ public class CronBolivariano {
 					routingAccion(file.getName());
 				}
 			}
-		} else {
-			System.out.println("no existe >>> " + PATH);
+		} else {			
+			log.error("no existe >>> " + PATH);
 		}
 	}
 
@@ -78,7 +84,7 @@ public class CronBolivariano {
 			writer.newLine();
 			writer.close();
 		} catch (IOException ioe) {
-			System.err.format("IOException: %s%n", ioe);
+			log.error("IOException: %s%n", ioe);
 		}
 	}
 }
