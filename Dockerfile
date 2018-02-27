@@ -1,4 +1,5 @@
-#imagen base
+#configuracion del vsftpd baso en la imagen de emilybache/vsftpd-server // https://github.com/emilybache
+#imagen base 
 FROM ubuntu:16.04
 
 #install java, vsftpd , supervisor
