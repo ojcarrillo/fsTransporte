@@ -36,36 +36,36 @@ public class GeneraRespuestas {
 	private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	
 	public void crearArchivoRta(String fileNameInput) {
-		File fileInput = new File(PATH + fileNameInput);
-		if(fileNameInput.startsWith(PREFIJO)){
-			return;
-		}
-		String fileNameOutput = PATH + PREFIJO + fileNameInput;
-		File fileOutput = new File(fileNameOutput);
-		if (!fileOutput.exists()) {
-			try {
-				fileOutput.createNewFile();
-			} catch (IOException e) {
-				log.error("IOException: %s%n", e);
-			}
-		}	
+		File fileInput = new File(PATH + fileNameInput);		
 		/* respuesta */
 		List<String> rtas = getRespuestas(fileInput);
-		/* agrega el nuevo mensaje al archivo */
-		try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileNameOutput), StandardOpenOption.APPEND)) {
-			for(String x : rtas) {
-				writer.write(x);
-				writer.newLine();
+		if(!rtas.isEmpty()){
+			String fileNameOutput = PATH + PREFIJO + fileNameInput;
+			File fileOutput = new File(fileNameOutput);
+			if (!fileOutput.exists()) {
+				try {
+					fileOutput.createNewFile();
+				} catch (IOException e) {
+					log.error("IOException: %s%n", e);
+				}
 			}
-			writer.close();
-		} catch (IOException ioe) {
-			log.error("IOException: %s%n", ioe);
-		} 
-		/* elimina archivo de entrada */
-		try {
-			Files.deleteIfExists(fileInput.toPath());
-		} catch (IOException e) {
-			log.error(e.getMessage());
+			/* agrega el nuevo mensaje al archivo */
+			try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileNameOutput), StandardOpenOption.APPEND)) {
+				for(String x : rtas) {
+					writer.write(x);
+					writer.newLine();
+				}
+				writer.flush();
+				writer.close();
+			} catch (IOException ioe) {
+				log.error("IOException: %s%n", ioe);
+			} 
+			/* elimina archivo de entrada */
+			try {
+				Files.deleteIfExists(fileInput.toPath());
+			} catch (IOException e) {
+				log.error(e.getMessage());
+			}
 		}
 	}
 	
