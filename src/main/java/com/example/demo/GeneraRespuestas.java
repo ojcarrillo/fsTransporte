@@ -37,6 +37,9 @@ public class GeneraRespuestas {
 	
 	public void crearArchivoRta(String fileNameInput) {
 		File fileInput = new File(PATH + fileNameInput);
+		if(fileNameInput.startsWith(PREFIJO)){
+			return;
+		}
 		String fileNameOutput = PATH + PREFIJO + fileNameInput;
 		File fileOutput = new File(fileNameOutput);
 		if (!fileOutput.exists()) {
@@ -78,7 +81,7 @@ public class GeneraRespuestas {
 				return getDatosRtaReservar(fileInput);
 			} else if (fileInput.getName().startsWith("comprar_")) {
 				return getDatosRtaComprar(fileInput);
-			} else if (fileInput.getName().startsWith("anular_")) {
+			} else if (fileInput.getName().startsWith("cancelar_")) {
 				return getDatosRtaAnular(fileInput);
 			} 	
 		}catch(Exception ex) {
@@ -95,7 +98,8 @@ public class GeneraRespuestas {
 			String fechaFinal = opc.substring(8, 16).trim();
 			String ciudadOrigen = opc.substring(16, 37).trim();
 			String ciudadDestino = opc.substring(37, 58).trim();
-			for(int i=1;i<new Random().nextInt(10)+1;i++) {
+			String idreserva = opc.substring(59, 64).trim();
+			if(idreserva!=null && !idreserva.equals("00000")){
 				StringBuilder salida = new StringBuilder();
 				salida.append(gendata.getIdViaje());
 				salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
@@ -103,6 +107,16 @@ public class GeneraRespuestas {
 				salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
 				salida.append(gendata.getPuestosDisponibles());
 				rtas.add(salida.toString());
+			}else{
+				for(int i=1;i<new Random().nextInt(10)+1;i++) {
+					StringBuilder salida = new StringBuilder();
+					salida.append(gendata.getIdViaje());
+					salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
+					salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());
+					salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
+					salida.append(gendata.getPuestosDisponibles());
+					rtas.add(salida.toString());
+				}
 			}
 		}
 		return rtas;
@@ -142,6 +156,7 @@ public class GeneraRespuestas {
 			salida.append(fechaViaje);
 			salida.append(ciudadOrigen);
 			salida.append(ciudadDestino);
+			salida.append(gendata.getPuestosDisponibles());
 			rtas.add(salida.toString());
 		}
 		return rtas;

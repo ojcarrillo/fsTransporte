@@ -40,8 +40,8 @@ public class CronBolivariano {
 		if (folder.exists()) {
 			File[] files = folder.listFiles();
 			for (File file : files) {
-				if (file.isFile() && file.getName().toLowerCase().endsWith(EXT)) {
-					System.out.println(file.getName());
+				if (file.isFile() && !file.getName().startsWith("rta_") && file.getName().toLowerCase().endsWith(EXT)) {
+					log.error(file.getName());
 					genRtas.crearArchivoRta(file.getName());
 				}
 			}
