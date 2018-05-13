@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -94,29 +95,33 @@ public class GeneraRespuestas {
 		List<String> rtas = new ArrayList<String>();
 		String opc = gendata.getFiltros(file);
 		if(opc!=null) {
-			String fechaInicial = opc.substring(0, 8);
-			String fechaFinal = opc.substring(8, 16).trim();
-			String ciudadOrigen = opc.substring(16, 37).trim();
-			String ciudadDestino = opc.substring(37, 58).trim();
-			String idreserva = opc.substring(59, 64).trim();
+//			String fechaInicial = opc.substring(0, 8);
+//			String fechaFinal = opc.substring(8, 16).trim();
+//			String ciudadOrigen = opc.substring(16, 37).trim();
+//			String ciudadDestino = opc.substring(37, 58).trim();
+			String idreserva = opc.substring(0, 9).trim();
 			if(idreserva!=null && !idreserva.equals("00000")){
 				StringBuilder salida = new StringBuilder();
 				salida.append(gendata.getIdViaje());
-				salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
-				salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());
-				salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
+//				salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
+//				salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());
+//				salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
+				Date fecSalida = gendata.getFutureDay(new Date(), 5);
+				salida.append(gendata.getFechaSalida(fecSalida, gendata.getFutureDay(fecSalida, 5)));
+				salida.append(gendata.getCiudad());
+				salida.append(gendata.getCiudad());
 				salida.append(gendata.getPuestosDisponibles());
 				rtas.add(salida.toString());
 			}else{
-				for(int i=1;i<new Random().nextInt(10)+1;i++) {
-					StringBuilder salida = new StringBuilder();
-					salida.append(gendata.getIdViaje());
-					salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
-					salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());
-					salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
-					salida.append(gendata.getPuestosDisponibles());
-					rtas.add(salida.toString());
-				}
+//				for(int i=1;i<new Random().nextInt(10)+1;i++) {
+//					StringBuilder salida = new StringBuilder();
+//					salida.append(gendata.getIdViaje());
+//					salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
+//					salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());
+//					salida.append(ciudadDestino.length()>0 ? ciudadDestino : gendata.getCiudad());
+//					salida.append(gendata.getPuestosDisponibles());
+//					rtas.add(salida.toString());
+//				}
 			}
 		}
 		return rtas;

@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -119,5 +120,12 @@ public class GenerarDatosUtils {
 		return StringUtils.leftPad(String.valueOf(cantPuestos), 2, "0")
 				+ StringUtils.leftPad(String.valueOf(valorPuestos), 17, "0")
 				+ StringUtils.leftPad(String.valueOf(valorIVA), 17, "0");
+	}
+	
+	public Date getFutureDay(Date date, Integer days){
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.add(Calendar.DATE, days);  // number of days to add
+		return c.getTime();
 	}
 }
