@@ -281,3 +281,12 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
 
+2018-05-12 23:22:10.778  INFO 21404 --- [main] c.example.demo.FsTransporteApplication   : Starting FsTransporteApplication on DESKTOP-760PLSR with PID 21404 (D:\servicios\fsTransporte\target\classes started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 23:22:10.782  INFO 21404 --- [main] c.example.demo.FsTransporteApplication   : No active profile set, falling back to default profiles: default
+2018-05-12 23:22:10.828  INFO 21404 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5890e879: startup date [Sat May 12 23:22:10 COT 2018]; root of context hierarchy
+2018-05-12 23:22:11.323  INFO 21404 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-12 23:22:11.332  INFO 21404 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 23:22:11.341  INFO 21404 --- [main] c.example.demo.FsTransporteApplication   : Started FsTransporteApplication in 0.802 seconds (JVM running for 1.333)
+2018-05-12 23:22:16.339 ERROR 21404 --- [pool-1-thread-1] com.example.demo.CronBolivariano         : reservar_1526184266104.txt
+2018-05-12 23:27:51.099 ERROR 21404 --- [pool-1-thread-1] com.example.demo.CronBolivariano         : reservar_1526184266104.txt
+2018-05-12 23:28:02.603 ERROR 21404 --- [pool-1-thread-1] com.example.demo.CronBolivariano         : reservar_1526184266104.txt
