@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -162,8 +163,8 @@ public class GeneraRespuestas {
 			salida.append(gendata.getIdReserva());
 			salida.append(gendata.getIdViaje());
 			salida.append(fechaViaje);
-			salida.append(ciudadOrigen);
-			salida.append(ciudadDestino);
+			salida.append(StringUtils.rightPad(ciudadOrigen, 21, " "));
+			salida.append(StringUtils.rightPad(ciudadDestino, 21, " "));
 			salida.append(gendata.getPuestosDisponibles());
 			rtas.add(salida.toString());
 		}
