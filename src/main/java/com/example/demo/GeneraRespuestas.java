@@ -156,9 +156,9 @@ public class GeneraRespuestas {
 		List<String> rtas = new ArrayList<String>();
 		for(String opc : gendata.getFiltrosVarios(file)) {
 			String fechaViaje = opc.substring(0, 12).trim();
-			String ciudadOrigen = opc.substring(13, 34).trim();
-			String ciudadDestino = opc.substring(35, 56).trim();
-			String numPtos = opc.substring(56, opc.length());
+			String ciudadOrigen = opc.substring(12, 33).trim();
+			String ciudadDestino = opc.substring(33, 54).trim();
+			String numPtos = opc.substring(54, 55).trim();
 			StringBuilder salida = new StringBuilder();
 			salida.append(gendata.getIdReserva());
 			salida.append(gendata.getIdViaje());
