@@ -159,6 +159,7 @@ public class GeneraRespuestas {
 			String ciudadDestino = opc.substring(35, 56).trim();
 			String numPtos = opc.substring(57, 58).trim();
 			StringBuilder salida = new StringBuilder();
+			salida.append(gendata.getIdReserva());
 			salida.append(gendata.getIdViaje());
 			salida.append(fechaViaje);
 			salida.append(ciudadOrigen);

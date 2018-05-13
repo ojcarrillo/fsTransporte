@@ -59,6 +59,10 @@ public class GenerarDatosUtils {
 		return generateRandomStr(LETRAS, 3) + String.format("%06d", new Random().nextInt(100000) + 1);
 	}
 	
+	public String getIdReserva() {
+		return generateRandomStr(LETRAS, 1) + String.format("%08d", new Random().nextInt(100000) + 1);
+	}
+	
 	public String getIdCancelacion() {
 		return String.format("%07d", new Random().nextInt(1000000) + 1);
 	}
