@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 public class GenerarDatosUtils {
 
 	private final static List<String> ciudades = Arrays.asList(
-			"Puerto Inírida,San José del Guaviare,Neiva,Riohacha,Santa Marta,Villavicencio,Pasto,Cúcuta,Mocoa,Armenia,Pereira,San Andres,Bucaramanga,Sincelejo,Ibagué,Cali,Mitú,Puerto Carreño,Leticia,Medellín,Arauca,Barranquilla,Cartagena,Tunja,Manizales,Florencia,Yopal,Popayán,Valledupar,Quibdó,Montería,Bogotá"
+			"Puerto Inirida,San Jose del Guaviare,Neiva,Riohacha,Santa Marta,Villavicencio,Pasto,Cucuta,Mocoa,Armenia,Pereira,San Andres,Bucaramanga,Sincelejo,Ibague,Cali,Mitu,Puerto Carreño,Leticia,Medellin,Arauca,Barranquilla,Cartagena,Tunja,Manizales,Florencia,Yopal,Popayan,Valledupar,Quibdo,Monteria,Bogota"
 					.split(","));
 	private final static String FORMATO_FECHA_HORA = "ddMMyyyyHH00";
 	private final static String FORMATO_FECHA_ENTRADA = "ddMMyyyy";
@@ -127,5 +127,10 @@ public class GenerarDatosUtils {
 		c.setTime(date);
 		c.add(Calendar.DATE, days);  // number of days to add
 		return c.getTime();
+	}
+	
+	public Date parseDate(String fecha,String formato) throws ParseException {
+		SimpleDateFormat formatoDate = new SimpleDateFormat(formato);
+		return formatoDate.parse(fecha);
 	}
 }

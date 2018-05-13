@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.ParseException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
@@ -102,6 +103,7 @@ public class GeneraRespuestas {
 			String idreserva = opc.substring(0, 9).trim();
 			if(idreserva!=null && !idreserva.equals("00000")){
 				StringBuilder salida = new StringBuilder();
+				salida.append(idreserva);
 				salida.append(gendata.getIdViaje());
 //				salida.append(gendata.getFechaSalida(gendata.getFechaEntrada(fechaInicial), gendata.getFechaEntrada(fechaFinal)));
 //				salida.append(ciudadOrigen.length()>0 ? ciudadOrigen : gendata.getCiudad());

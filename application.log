@@ -1,0 +1,58 @@
+2018-05-12 20:21:41.689  INFO 24100 --- [main] c.e.demo.FsTransporteApplicationTests    : Starting FsTransporteApplicationTests on DESKTOP-760PLSR with PID 24100 (started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:21:41.690  INFO 24100 --- [main] c.e.demo.FsTransporteApplicationTests    : No active profile set, falling back to default profiles: default
+2018-05-12 20:21:41.713  INFO 24100 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:21:41 COT 2018]; root of context hierarchy
+2018-05-12 20:21:42.058  INFO 24100 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:21:42.072  INFO 24100 --- [main] c.e.demo.FsTransporteApplicationTests    : Started FsTransporteApplicationTests in 0.583 seconds (JVM running for 1.143)
+2018-05-12 20:21:42.097  INFO 24100 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:21:41 COT 2018]; root of context hierarchy
+2018-05-12 20:21:56.712  INFO 14812 --- [main] c.example.demo.FsTransporteApplication   : Starting FsTransporteApplication v0.0.1-SNAPSHOT on DESKTOP-760PLSR with PID 14812 (D:\servicios\fsTransporte\target\sandbox_fsTransporte.jar started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:21:56.715  INFO 14812 --- [main] c.example.demo.FsTransporteApplication   : No active profile set, falling back to default profiles: default
+2018-05-12 20:21:56.766  INFO 14812 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:21:56 COT 2018]; root of context hierarchy
+2018-05-12 20:21:57.254  INFO 14812 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-12 20:21:57.261  INFO 14812 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:21:57.274  INFO 14812 --- [main] c.example.demo.FsTransporteApplication   : Started FsTransporteApplication in 0.877 seconds (JVM running for 1.234)
+2018-05-12 20:41:59.503  INFO 14812 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:21:56 COT 2018]; root of context hierarchy
+2018-05-12 20:41:59.508  INFO 14812 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-12 20:42:10.397  INFO 22304 --- [main] c.e.demo.FsTransporteApplicationTests    : Starting FsTransporteApplicationTests on DESKTOP-760PLSR with PID 22304 (started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:42:10.399  INFO 22304 --- [main] c.e.demo.FsTransporteApplicationTests    : No active profile set, falling back to default profiles: default
+2018-05-12 20:42:10.422  INFO 22304 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:42:10 COT 2018]; root of context hierarchy
+2018-05-12 20:42:10.766  INFO 22304 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:42:10.775  INFO 22304 --- [main] c.e.demo.FsTransporteApplicationTests    : Started FsTransporteApplicationTests in 0.579 seconds (JVM running for 1.124)
+2018-05-12 20:42:10.801  INFO 22304 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:42:10 COT 2018]; root of context hierarchy
+2018-05-12 20:42:20.683  INFO 21220 --- [main] c.example.demo.FsTransporteApplication   : Starting FsTransporteApplication v0.0.1-SNAPSHOT on DESKTOP-760PLSR with PID 21220 (D:\servicios\fsTransporte\target\sandbox_fsTransporte.jar started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:42:20.687  INFO 21220 --- [main] c.example.demo.FsTransporteApplication   : No active profile set, falling back to default profiles: default
+2018-05-12 20:42:20.737  INFO 21220 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b7951: startup date [Sat May 12 20:42:20 COT 2018]; root of context hierarchy
+2018-05-12 20:42:21.237  INFO 21220 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-12 20:42:21.244  INFO 21220 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:42:21.257  INFO 21220 --- [main] c.example.demo.FsTransporteApplication   : Started FsTransporteApplication in 0.912 seconds (JVM running for 1.303)
+2018-05-12 20:43:31.270 ERROR 21220 --- [pool-1-thread-1] com.example.demo.CronBolivariano         : query_reservas_1526173004881.txt
+2018-05-12 20:46:14.922  INFO 21220 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3b7951: startup date [Sat May 12 20:42:20 COT 2018]; root of context hierarchy
+2018-05-12 20:46:14.926  INFO 21220 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-12 20:46:24.517  INFO 3144 --- [main] c.e.demo.FsTransporteApplicationTests    : Starting FsTransporteApplicationTests on DESKTOP-760PLSR with PID 3144 (started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:46:24.518  INFO 3144 --- [main] c.e.demo.FsTransporteApplicationTests    : No active profile set, falling back to default profiles: default
+2018-05-12 20:46:24.538  INFO 3144 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:46:24 COT 2018]; root of context hierarchy
+2018-05-12 20:46:24.862  INFO 3144 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:46:24.874  INFO 3144 --- [main] c.e.demo.FsTransporteApplicationTests    : Started FsTransporteApplicationTests in 0.559 seconds (JVM running for 1.199)
+2018-05-12 20:46:24.900  INFO 3144 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:46:24 COT 2018]; root of context hierarchy
+2018-05-12 20:46:35.477  INFO 18616 --- [main] c.example.demo.FsTransporteApplication   : Starting FsTransporteApplication v0.0.1-SNAPSHOT on DESKTOP-760PLSR with PID 18616 (D:\servicios\fsTransporte\target\sandbox_fsTransporte.jar started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:46:35.481  INFO 18616 --- [main] c.example.demo.FsTransporteApplication   : No active profile set, falling back to default profiles: default
+2018-05-12 20:46:35.533  INFO 18616 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:46:35 COT 2018]; root of context hierarchy
+2018-05-12 20:46:36.023  INFO 18616 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-12 20:46:36.030  INFO 18616 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:46:36.043  INFO 18616 --- [main] c.example.demo.FsTransporteApplication   : Started FsTransporteApplication in 0.897 seconds (JVM running for 1.253)
+2018-05-12 20:47:15.677  INFO 18616 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:46:35 COT 2018]; root of context hierarchy
+2018-05-12 20:47:15.681  INFO 18616 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-12 20:47:22.706  INFO 9348 --- [main] c.e.demo.FsTransporteApplicationTests    : Starting FsTransporteApplicationTests on DESKTOP-760PLSR with PID 9348 (started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:47:22.707  INFO 9348 --- [main] c.e.demo.FsTransporteApplicationTests    : No active profile set, falling back to default profiles: default
+2018-05-12 20:47:22.731  INFO 9348 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:47:22 COT 2018]; root of context hierarchy
+2018-05-12 20:47:23.072  INFO 9348 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:47:23.082  INFO 9348 --- [main] c.e.demo.FsTransporteApplicationTests    : Started FsTransporteApplicationTests in 0.577 seconds (JVM running for 1.174)
+2018-05-12 20:47:23.105  INFO 9348 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@d21a74c: startup date [Sat May 12 20:47:22 COT 2018]; root of context hierarchy
+2018-05-12 20:47:26.889  INFO 10284 --- [main] c.example.demo.FsTransporteApplication   : Starting FsTransporteApplication v0.0.1-SNAPSHOT on DESKTOP-760PLSR with PID 10284 (D:\servicios\fsTransporte\target\sandbox_fsTransporte.jar started by AsusPC in D:\servicios\fsTransporte)
+2018-05-12 20:47:26.893  INFO 10284 --- [main] c.example.demo.FsTransporteApplication   : No active profile set, falling back to default profiles: default
+2018-05-12 20:47:26.944  INFO 10284 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:47:26 COT 2018]; root of context hierarchy
+2018-05-12 20:47:27.575  INFO 10284 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-12 20:47:27.583  INFO 10284 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-05-12 20:47:27.596  INFO 10284 --- [main] c.example.demo.FsTransporteApplication   : Started FsTransporteApplication in 1.02 seconds (JVM running for 1.38)
+2018-05-12 20:47:32.593 ERROR 10284 --- [pool-1-thread-1] com.example.demo.CronBolivariano         : query_reservas_1526173004881.txt
+2018-05-12 20:55:31.715  INFO 10284 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@14da5c3: startup date [Sat May 12 20:47:26 COT 2018]; root of context hierarchy
+2018-05-12 20:55:31.720  INFO 10284 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
