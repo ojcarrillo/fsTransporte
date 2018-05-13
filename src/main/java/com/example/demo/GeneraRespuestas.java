@@ -187,7 +187,8 @@ public class GeneraRespuestas {
 			String idViaje = opc.substring(0, 9).trim();
 			StringBuilder salida = new StringBuilder();
 			salida.append(idViaje);
-			salida.append(gendata.getIdCancelacion());			
+			salida.append(gendata.getIdCancelacion());	
+			salida.append("ANULACION RESERVA APROBADA");
 			rtas.add(salida.toString());
 		}
 		return rtas;
